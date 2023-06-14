@@ -63,32 +63,26 @@
       <ul class="skills">
         <li>
           <label for="html">HTML</label>
-          <progress id="html" value="90" max="100"></progress>
+          <div id="html" class="progress-bar" data-progress="90"></div>
           <span class="skill-level">9/10</span>
         </li>
         <li>
           <label for="css">CSS</label>
-          <progress id="css" value="80" max="100"></progress>
+          <div id="css" class="progress-bar" data-progress="80"></div>
           <span class="skill-level">8/10</span>
         </li>
         <li>
           <label for="javascript">JavaScript</label>
-          <progress id="javascript" value="70" max="100"></progress>
+          <div id="javascript" class="progress-bar" data-progress="70"></div>
           <span class="skill-level">7/10</span>
         </li>
         <li>
-          <label for="uiux">UI/UX Design</label>
-          <progress id="uiux" value="80" max="100"></progress>
-          <span class="skill-level">8/10</span>
-        </li>
-        <li>
-          <label for="git">Git</label>
-          <progress id="git" value="80" max="100"></progress>
-          <span class="skill-level">8/10</span>
+          <label for="uiux">UI/UX</label>
+          <div id="uiux" class="progress-bar" data-progress="70"></div>
+          <span class="skill-level">7/10</span>
         </li>
       </ul>
     </section>
-    
 
     <section id="projects">
       <h2>Projects</h2>
@@ -159,5 +153,20 @@
     <footer>
       <h1>Thank You For Visiting my Portfolio</h1>
     </footer>
+
+    <script>
+      // Update the progress bar width dynamically
+      function setProgressBarWidth(elementId, progressPercentage) {
+        const progressBar = document.getElementById(elementId);
+        progressBar.style.width = progressPercentage + "%";
+      }
+
+      // Example usage: set progress of HTML skill to 90%
+      setProgressBarWidth("html", 90);
+      setProgressBarWidth("css", 80);
+      setProgressBarWidth("javascript", 70);
+      setProgressBarWidth("uiux", 70);
+
+    </script>
   </body>
 </html>
